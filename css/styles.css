@@ -1,0 +1,146 @@
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+/* Main Styles */
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	background: #2F4F4F;
+	position: relative;
+}
+
+.container {
+	height: 800px;
+	width: 800px;
+	margin: auto;
+	background: rgb(34,193,195);
+	background: linear-gradient(171deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+
+}
+
+.field {
+	width: 90%;
+	height: 90%;
+	position: relative;
+	top: 5%;
+	left: 5%;
+	counter-reset: num;
+}
+
+.field::before {
+	content: '';
+}
+
+.row {
+	height: 12.5%;
+	background-color: #F0E68C;
+	width: 100%;
+	position: relative;
+	counter-reset: letter;
+}
+
+.row::before {
+	position: absolute;
+	left: -3.5%;
+	top: 40%;
+	counter-increment: num;
+	content: counter(num);
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.row:last-child .check::after {
+	position: absolute;
+	bottom: -30px;
+	left: 45%;
+	counter-increment: letter;
+	content: counter(letter, lower-alpha);
+	font-size: 20px;
+	font-weight: 500;
+	color: #fff;
+	
+}
+
+.row:nth-child(even) .check:nth-child(even),
+.row:nth-child(odd) .check:nth-child(odd) {
+
+	background: #8B4513;
+}
+
+.check {
+	width: 12.5%;
+	height: 100%;
+	position: absolute;
+}
+
+.check:nth-child(1) {
+	left: 0;
+}
+
+.check:nth-child(2) {
+	left: 12.5%;
+}
+
+.check:nth-child(3) {
+	left: 25%;
+}
+
+.check:nth-child(4) {
+	left: 37.5%;
+}
+
+.check:nth-child(5) {
+	left: 50%;
+}
+
+.check:nth-child(6) {
+	left: 62.5%;
+}
+
+.check:nth-child(7) {
+	left: 75%;
+}
+
+.check:nth-child(8) {
+	left: 87.5%;
+}
+
+img {
+	height: 90%;
+	width: 90%;
+	position: relative;
+	top: 5%;
+	left: 5%;
+	opacity: .8;
+	transition: all .3s;
+}
+
+img:hover {
+	transform: scale(1.1);
+}
+
